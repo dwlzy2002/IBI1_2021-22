@@ -1,6 +1,5 @@
 # What does this piece of code do?
-# Answer:Print the 10th number that is randomly selected from integer in 
-[1,100].
+# Answer:Print the 10th number that is randomly selected from integer in [1,100].
 
 # Import libraries
 # randint allows drawing a random number,
