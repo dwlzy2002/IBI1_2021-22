@@ -7,9 +7,9 @@ while p < 64 :
     p = (n**2+n+2)/2 
     #give the computer fomula to calculate p.
     if p < 64:
-        print("if we cut",n,"times","we will get",p,"slices of pizza.","Not enough. Please go on.XD") 
+        print("if we cut",n,"times, we will get",p,"slices of pizza.","Not enough. Please go on.XD") 
     else:
-        print("if we cut",n,"times","we will get",p,"slices of pizza.","That's enough. Let's eat.:)")
+        print("if we cut",n,"times, we will get",p,"slices of pizza.","That's enough. Let's eat.:)")
     #check the value of p and print the sentences.
     #for p<64, print the "not enough." sentence.
     #because i use the while loop,after the last p that is smaller than 64, it will start a new try.so I need to adjust my output sentence for this new p that is equal or bigger than 64.
