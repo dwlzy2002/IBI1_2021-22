@@ -7,7 +7,7 @@ print("d =",d,"e =",e) # d<e , the rate of 2021 is greater.
 
 
 
-X = str(input("X:"))
-Y = str(input("Y:"))
+X = True
+Y = False
 W = X and Y
 print(W)
