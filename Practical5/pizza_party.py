@@ -10,6 +10,5 @@ while p < 64 :
         print("if we cut",n,"times","we will get",p,"slices of pizza.","Not enough. Please go on.XD") 
     else:
         print("if we cut",n,"times","we will get",p,"slices of pizza.","That's enough. Let's eat.:)")
-    #check the value of p. (because i use the while loop,after 10 times, it will start a new try.I need to check whether p<64 this time to agjust my output sentence.)
-    #p<64,print the sentence and go on adding cut times.
-    #p=64 stop adding and print the"that's enough." sentence.           
+    #check the value of p. (because i use the while loop,after the last p that is smaller than 64, it will start a new try.so I need to adjust my output sentence for this new p that is bigger than 64.)
+    #for p>64, print the"that's enough." sentence.           
