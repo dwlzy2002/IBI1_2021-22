@@ -22,5 +22,5 @@ if mean >= 60:
     print("Rob's final score is",mean,"Passed.")
 else:
     print("Rob's final score is"+" "+str(mean)+"."+"Failed.")
-
+# Rob failed actually.
 
