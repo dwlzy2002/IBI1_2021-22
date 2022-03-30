@@ -24,7 +24,7 @@ for m in range(0,7996):
         covid_data1.loc[m,"location"] =n
     my_rows=list(covid_data1.loc[:,"location"])
 print(covid_data.loc[my_rows,"total_cases"])
-#china datas
+#china datas mean
 covid_data2=pd.read_csv("full_data.csv")
 for o in range(0,7996):
     if covid_data2.loc[o,"location"]=="China":
@@ -39,17 +39,39 @@ china_new_data = covid_data.loc[my_rows1,["date","new_cases","new_deaths"]]
 print(china_new_data)
 
 mean=np.mean(covid_data.loc[my_rows1,["new_cases","new_deaths"]])
-print(mean)
-#box plot
-#new_list=list(covid_data.loc[0:i,"new_cases"])
-#death_list=list(covid_data.loc[0:i,"new_deaths"])
-#new_list.sort()
-#death_list.sort()
+print(mean)#cases mean = 893.923913, deaths mean = 35.967391
+#box plot in China
 x = covid_data.loc[my_rows1,["new_cases","new_deaths"]]
-plt.boxplot(x,vert=True,whis=1.5,labels=["new_cases","new_deaths"],showbox=True,showfliers=False)
-#plot the data over time
+plt.boxplot(x,vert=True,whis=1.5,labels=["new cases","new deaths"],showbox=True)
+plt.show()
+#plot the data over time in China
 china_dates=covid_data.loc[my_rows1,"date"]
 china_new_cases=covid_data.loc[my_rows1,"new_cases"]
 china_new_deaths=covid_data.loc[my_rows1,"new_deaths"]
-plt.plot(china_dates, china_new_cases,'b+')
-plt.plot(china_dates, china_new_deaths,'r+')
+plt.plot(china_dates, china_new_cases,'b+',label="new cases")
+plt.plot(china_dates, china_new_deaths,'r+',label="new deaths")
+plt.legend()
+plt.title("China new cases and deaths")
+plt.xticks(china_dates.iloc[0:len(china_dates):4],rotation=-90)
+plt.ylabel("cases/deaths number")
+plt.legend()
+plt.show()
+#qestion:how can we see and compare the total cases number in 2020.3.14?
+#answer:using a scatter of total cases in 20203.14 to compare the cases number in different contries.
+covid_data3=pd.read_csv("full_data.csv")
+for r in range(0,7996):
+    if covid_data3.loc[r,"date"]=="2020-03-14":
+        s = True
+        covid_data3.loc[r,"date"] =s
+    else:
+        s = False
+        covid_data3.loc[r,"date"] =s
+    my_rows2=list(covid_data3.loc[:,"date"])
+total_in_0314=covid_data.loc[my_rows2,"total_cases"]
+contries_name=covid_data.loc[my_rows2,"location"]
+plt.figure(figsize=(40,5))
+plt.scatter(contries_name,total_in_0314,marker="o")
+plt.xticks(rotation=-90)
+plt.title("total cases worldwide in 2020.3.14")
+plt.ylabel("cases number")
+plt.show()
