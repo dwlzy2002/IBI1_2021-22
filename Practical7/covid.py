@@ -43,6 +43,7 @@ print(mean)#cases mean = 893.923913, deaths mean = 35.967391
 #box plot in China
 x = covid_data.loc[my_rows1,["new_cases","new_deaths"]]
 plt.boxplot(x,vert=True,whis=1.5,labels=["new cases","new deaths"],showbox=True)
+plt.title("boxplots of new cases and new deaths in China")
 plt.show()
 #plot the data over time in China
 china_dates=covid_data.loc[my_rows1,"date"]
