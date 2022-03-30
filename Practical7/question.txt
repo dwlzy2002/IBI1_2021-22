@@ -1,0 +1,2 @@
+question:How can we show and compare the total cases data in 2020.3.14?
+the code line number:
