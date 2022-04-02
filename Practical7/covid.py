@@ -10,9 +10,7 @@ print(covid_data.iloc[10:21,1:4:2])
 i=0
 while covid_data.loc[i,"location"]=="Afghanistan":
     i+=1
-    if covid_data.loc[i+1,"location"]!="Afghanistan":
-        break
-print(covid_data.loc[0:i,"total_cases"])
+print(covid_data.loc[0:i-1,"total_cases"])
 #print the “total cases” for all rows corresponding to Afghanistan(use boolean)
 covid_data1=pd.read_csv("full_data.csv")
 for m in range(0,7996):
