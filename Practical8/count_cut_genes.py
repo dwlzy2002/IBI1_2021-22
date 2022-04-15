@@ -4,7 +4,6 @@ f3=open(file_name,'w')
 f2=open('cut_genes.fa')
 seq={}
 for line in f2:
-    all_cut_genes=''
     if line.startswith('>'):
         name=re.search(r'(>.+?)\d+',line).group(1)
         seq[name]=''
