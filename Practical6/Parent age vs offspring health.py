@@ -9,7 +9,7 @@ x = age.keys()
 y = age.values()
 #Use the plt.scatter funtion to draw the plot.
 plt.scatter(x,y,marker = "o")
-plt.xlable(" father's age")
+plt.xlabel(" father's age")
 plt.ylabel("the risk of CHD")
 plt.title("The relationship between father's age and the risk of CHD in the offspring ")
 #Show the plot.
