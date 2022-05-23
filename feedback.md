@@ -1,3 +1,4 @@
 According to my formative feedback, I changed several things for my code.
 Firstly, I added a file called Reflection.txt into my practical 4 folder.
 Secondly, I added the code comparing c and d in variables.py which is in the practical 5 folder.
+Then, I added other 3 types of X and Y in variables.py.
