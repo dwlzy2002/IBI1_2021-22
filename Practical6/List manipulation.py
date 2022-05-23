@@ -10,6 +10,9 @@ import matplotlib.pyplot as plt
 score = new_m
 #Plot the boxplot.
 plt.boxplot(score, vert=True, whis=1.5, patch_artist=True)
+plt.ylabel("marks")
+plt.title("the distribution of marks")
+
 plt.show()
 #Use for loop to sum the elements in the list.
 total = 0
