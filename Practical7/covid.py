@@ -71,7 +71,9 @@ total_in_0314=covid_data.loc[my_rows2,"total_cases"]
 countries_name=covid_data.loc[my_rows2,"location"]
 plt.figure(figsize=(40,5))
 plt.bar(countries_name,total_in_0314)
-plt.xticks(rotation=-90)
-plt.title("total cases worldwide in 2020.3.14")
-plt.ylabel("cases number")
+for a,b in zip(countries_name,total_in_0314):   
+    plt.text(a,b,'%s'%b,ha='center',va='bottom',fontsize=12)
+plt.xticks(rotation=-90, fontsize=15)
+plt.title("total cases worldwide in 2020.3.14", fontsize=30)
+plt.ylabel("cases number", fontsize=20)
 plt.show()
