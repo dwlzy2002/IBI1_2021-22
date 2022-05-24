@@ -53,12 +53,16 @@ plt.ylabel("cases/deaths number")
 plt.legend()
 plt.show()
 #qestion:how can we see and compare the total cases number in 2020.3.14?
-#answer:using a scatter of total cases in 2020.3.14 to compare the cases number in different countries. The plot can also show the cases number of the whole world.
+#answer:using a bar graph of total cases in 2020.3.14 to compare the cases number in different countries. 
 covid_data3=pd.read_csv("full_data.csv")
 for r in range(0,7996):
     if covid_data3.loc[r,"date"]=="2020-03-14":
-        s = True
-        covid_data3.loc[r,"date"] =s
+        if covid_data3.loc[r,"location"]=="World":
+            s = False
+            covid_data3.loc[r,"date"] =s
+        else:
+            s = True
+            covid_data3.loc[r,"date"] =s
     else:
         s = False
         covid_data3.loc[r,"date"] =s
@@ -66,7 +70,7 @@ for r in range(0,7996):
 total_in_0314=covid_data.loc[my_rows2,"total_cases"]
 countries_name=covid_data.loc[my_rows2,"location"]
 plt.figure(figsize=(40,5))
-plt.scatter(countries_name,total_in_0314,marker="o")
+plt.bar(countries_name,total_in_0314)
 plt.xticks(rotation=-90)
 plt.title("total cases worldwide in 2020.3.14")
 plt.ylabel("cases number")
