@@ -11,5 +11,8 @@ def nucleotide_content(x):
    G_perc=G/len(x)
    print("percentage of A or a:",A_perc,"percentage of T or t:",T_perc,"percentage of C or c:",C_perc,"percentage of G or g:",G_perc)
    return A_perc,T_perc,C_perc,G_perc
+#example:
 seq="GAAtTCATGGa"
 nucleotide_content(seq)
+seq2=str(input("sequence:"))
+nucleotide_content(seq2)
