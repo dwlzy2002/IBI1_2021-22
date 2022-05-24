@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 #Set scores in new_m list as x.
 score = new_m
 #Plot the boxplot.
-plt.boxplot(score, vert=True, whis=1.5, patch_artist=True)
+plt.boxplot(score, labels=["Rob"], vert=True, whis=1.5, patch_artist=True)
 plt.ylabel("marks")
 plt.title("the distribution of marks")
 
