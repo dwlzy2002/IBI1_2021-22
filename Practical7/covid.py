@@ -5,12 +5,7 @@ import numpy as np
 os.chdir("C:/Users/DUWL/desktop")
 covid_data=pd.read_csv("full_data.csv")
 #print the the first and third columns from rows 10-20. 
-print(covid_data.iloc[10:21,1:4:2])
-#print the “total cases” for all rows corresponding to Afghanistan(my own way)
-i=0
-while covid_data.loc[i,"location"]=="Afghanistan":
-    i+=1
-print(covid_data.loc[0:i-1,"total_cases"])
+print(covid_data.iloc[10:21,0:3:2])
 #print the “total cases” for all rows corresponding to Afghanistan(use boolean)
 covid_data1=pd.read_csv("full_data.csv")
 for m in range(0,7996):
@@ -58,7 +53,7 @@ plt.ylabel("cases/deaths number")
 plt.legend()
 plt.show()
 #qestion:how can we see and compare the total cases number in 2020.3.14?
-#answer:using a scatter of total cases in 20203.14 to compare the cases number in different countries. The plot can also show the cases number of the whole world.
+#answer:using a scatter of total cases in 2020.3.14 to compare the cases number in different countries. The plot can also show the cases number of the whole world.
 covid_data3=pd.read_csv("full_data.csv")
 for r in range(0,7996):
     if covid_data3.loc[r,"date"]=="2020-03-14":
