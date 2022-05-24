@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 os.chdir("C:/Users/DUWL/desktop")
 covid_data=pd.read_csv("full_data.csv")
-#print the the first and third columns from rows 10-20. 
+#print the first and third columns from rows 10-20. 
 print(covid_data.iloc[10:21,0:3:2])
 #print the “total cases” for all rows corresponding to Afghanistan(use boolean)
 covid_data1=pd.read_csv("full_data.csv")
