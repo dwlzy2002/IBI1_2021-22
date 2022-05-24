@@ -38,8 +38,11 @@ def alignment (x,y):
     return (pre_iden,score)
 
         
+print("There is human-mouse:")        
 alignment(seq1, seq2)
+print("\n"+"There is human-random:")
 alignment(seq1, seq3)
+print("\n"+"There is mouse-random:")
 alignment(seq2, seq3)
 s1.close()
 s2.close()
