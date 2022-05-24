@@ -1,4 +1,16 @@
 Findings:
+human-mouse: 
+the alignment score is 1490
+the percentage of identical amino acids is 0.9653979238754326
+
+human-random:
+the alignment score is -351
+the percentage of identical amino acids is 0.02768166089965396
+
+mouse-random:
+the alignment score is -348
+the percentage of identical amino acids is 0.03114186851211076
+
 seq1(DLX5_human) and seq2(DLX5_mouse) are similar, becasue the BLOSUM score is 1490 and the percentage of identical amino is larger than 0.96.
 However, for seq1 and seq3 as well as seq2 and seq3, they are unlike each other. The BLOSUM score for these two comparisons are -351 and -348, respectively. And identical percentage are 0.028 and 0.031. That is to say, the random sequence is unlike the DLX5 gene.   
 But the DLX5_ mouse is slightly more like the random sequence, because of the higher score and percentage.
