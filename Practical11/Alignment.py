@@ -1,4 +1,5 @@
 import pandas as pd
+# because I download these files in the same folder as python,so I do not need to add path of these files.
 s1 = open('DLX5_human.fa')
 s2 = open('DLX5_mouse.fa')
 s3 = open('RandomSeq.fa')
