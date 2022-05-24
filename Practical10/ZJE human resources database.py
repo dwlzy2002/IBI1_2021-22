@@ -9,5 +9,6 @@ class Staff(object):
         info="full name:"+self.f_name+" "+self.l_name+" "+"location:"+self.location+" role:"+self.role
         print(info)
         return info
+#example:
 a=Staff("Lisa","Wang","Edinburg","faculty")
 Staff.information(a)
