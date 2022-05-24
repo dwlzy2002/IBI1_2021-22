@@ -40,7 +40,8 @@ mean=np.mean(covid_data.loc[my_rows1,["new_cases","new_deaths"]])
 print(mean)#cases mean = 893.923913, deaths mean = 35.967391
 #box plot in China
 x = covid_data.loc[my_rows1,["new_cases","new_deaths"]]
-plt.boxplot(x,vert=True,whis=1.5,labels=["new cases","new deaths"],showbox=True)
+#Since the outliers are too big, which can affect the comparation between the means of these two types.So I change showfliers to False.
+plt.boxplot(x,vert=True,whis=1.5,labels=["new cases","new deaths"],showbox=True, showfliers=False)
 plt.ylabel("cases/deaths number")
 plt.title("boxplots of new cases and new deaths in China")
 plt.show()
