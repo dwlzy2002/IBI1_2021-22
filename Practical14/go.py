@@ -55,7 +55,7 @@ for term in terms:
        if "translation" in defstr.childNodes[0].data or "Translation" in defstr.childNodes[0].data:
            trans.append(total_child)
        total.append(total_child)
-#plot two boxplot.           
+#plot two boxplots.           
 x = total
 plt.boxplot(x,vert=True,whis=1.5,labels=["total child"],showbox=True)
 plt.title("the distribution of childnodes across total terms")
@@ -66,6 +66,7 @@ plt.boxplot(x,vert=True,whis=1.5,labels=["trans child"],showbox=True)
 plt.title("the distribution of childnodes across terms associated with translation")
 plt.ylabel('childnodes number')
 plt.show()
+#calculate and compare two averages.
 avr_total=sum(total)/len(total)
 avr_trans=sum(trans)/len(trans)
 if avr_total>avr_trans:
