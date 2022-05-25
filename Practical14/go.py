@@ -43,17 +43,19 @@ def calculator(x):
     return len(child_dic)
 total=[]
 trans=[]
+#Add the childnodes number of each id into the list one by one.
 for term in terms:
        ids = term.getElementsByTagName('id')[0].childNodes[0].data
        defstr = term.getElementsByTagName('defstr')[0]
        child_dic={}
        total_child=0
+#for all ids,if it has "translation", its child nodes will be added into trans list to store. The child nodes of total ids will then be added into total list to store. 
        if ids in parent_dic:
            total_child=calculator(ids)
        if "translation" in defstr.childNodes[0].data or "Translation" in defstr.childNodes[0].data:
            trans.append(total_child)
        total.append(total_child)
-           
+#plot two boxplot.           
 x = total
 plt.boxplot(x,vert=True,whis=1.5,labels=["total child"],showbox=True)
 plt.title("the distribution of childnodes across total terms")
